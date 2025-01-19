@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="download.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>AssingMent-js</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+</head>
+<body>
+  
+    <div class="flex" id="top">
+        <header > <a href="index.html" ><img src="Untitled Project - New Group (1).png" alt="" width="20%" ></a> &nbsp;&nbsp;&nbsp; Somali Flag Designe</header><br>
+    </div>
+
+    <!-- Navbar with burger menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+        <ul class="nav-links">
+            <li><a href="chapters.html" id="main">Chapters</a></li>
+            <li><a href="ExamLap.html">LAP<i class="fa-solid fa-laptop-code"></i></a></li>
+            <li><a href="AssingMent.html">assignment</a></li>
+            <li id="chapter-project">
+                <a href="#" id="Project">Project<i class="fa-solid fa-angle-down"></i></a>
+                <ul class="dropdown">
+                    <li><a href="project-One.html" style="color: black;">Project One</a></li>\
+                    <li><a href="projject-two.html" style="color: black;">Project Two</a></li>
+                </ul>
+            </li>
+            <li><a href="about-me.html">About-Us</a></li>
+            <li><a href="login.html">log in</a></li>
+            <li><a href="help.html" >Help page</a></li>
+        </ul>
+        <!-- Burger icon -->
+        <div class="burger" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav><br><br>
+    
+           <center>
+            <section class="ch2">
+                
+                <div class="chapter2">
+                    <h3>1. function diclaration.</h3>
+                    <button id="ch4_reader1" class="button1">Click Here</button>
+                </div>
+    
+                <p id="btn001" class="output"></p>
+    
+                <!-- logical Oprator -->
+                <div class="chapter2">
+                    <h3>2. globalvariable.</h3>
+                    <button id="ch4_reader2" class="button1">Click Here</button>
+                </div>
+    
+                <p id="btn002" class="output"></p>
+                 
+                <!-- AssingMent Oprator -->
+                <div class="chapter2">
+                    <h3>3. localvariable.</h3>
+                    <button id="ch4_reader3" class="button1">Click Here</button>
+                </div>
+    
+                <p id="btn003" class="output"></p>
+    
+                <!-- Increment Oprator -->
+                <div class="chapter2">
+                    <h3>4.backvariable.</h3>
+                    <button id="ch4_reader4" class="button1">Click Here</button>
+                </div>
+    
+                <p id="btn004" class="output"></p>
+    
+                <!-- Decrement Oprator -->
+                <div class="chapter2">
+                    <h3>5. anonymos Callback.</h3>
+                    <button id="ch4_reader5" class="button1">Click Here</button>
+                </div>
+    <br>
+                <p id="btn005" class="output"></p>
+                <br>
+            </section>
+            
+        </center>
+
+        <script>
+
+ch4_reader1.onclick = function() {
+    
+    let messages01 = "Hello mr Abdiwahaab😜 ";
+    const output = document.getElementById('btn001');
+    output.innerHTML = messages01;
+    output.classList.toggle('show');
+
+};
+
+
+var globalvariable = "i`m global scope";
+ch4_reader2.onclick = function(){
+    const output = document.getElementById('btn002');
+    output.innerHTML = globalvariable;
+    output.classList.toggle('show');
+}
+
+ch4_reader3.onclick = function(){
+   var locallvariable = "i`m local scope";
+   const output = document.getElementById('btn003');
+    output.innerHTML = locallvariable;
+    output.classList.toggle('show');
+}
+
+ch4_reader4.onclick = function(){
+    if(true){
+        let backvariable = "i`m backvariable";
+        const output = document.getElementById('btn004');
+       output.innerHTML = backvariable;
+       output.classList.toggle('show');
+    }
+}
+
+ch4_reader5.onclick = function(){
+            let output = "";
+            const size = 8;
+            for (let i = 1; i <= size; i++) {
+                for (let j = 1; j <= size; j++) {
+                    output += `${i} * ${j} = ${i * j}<br>`;
+                }
+            }
+            const output2 = document.getElementById('btn005');
+            output2.innerHTML = output;
+            output2.classList.toggle('show');
+};
+        </script>
+      <!-- menu -->
+<a href="chapters.html" class="back-to-menu">
+    <div class="icon-menu">
+        <i class="fa-duotone fa-solid fa-arrow-left"></i>
+    </div>
+  </a><br>
+<!-- menu -->       
+
+           <a href="#top" class="back-to-top">
+            <div class="icon">
+              <i class="fa-solid fa-arrow-up"></i>
+            </div>
+          </a><br>
+
+           <footer class="container-footer">
+            <h3 class="js">AssingMent-js</h3><hr>
+            <p>© <span>Copyright</span> <strong class="sitename">AssingMent-js</strong> <span>All Rights Reserved</span></p>   
+        </footer>
+</body>
+</html>

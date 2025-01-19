@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="download.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>AssingMent-js</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+</head>
+<body>
+   
+    
+
+    <div class="flex" id="top">
+        <header > <a href="index.html" ><img src="Untitled Project - New Group (1).png" alt="" width="20%" ></a> &nbsp;&nbsp;&nbsp; Somali Flag Designe</header><br>
+    </div>
+
+    <!-- Navbar with burger menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+        <ul class="nav-links">
+            <li><a href="chapters.html" id="main">Chapters</a></li>
+            <li><a href="ExamLap.html">Lab<i class="fa-solid fa-laptop-code"></i></a></li>
+            <li><a href="AssingMent.html">Assignment</a></li>
+            <li id="chapter-project">
+                <a href="#" id="Project">Project<i class="fa-solid fa-angle-down"></i></a>
+                <ul class="dropdown">
+                    <li><a href="project-One.html" style="color: black;">Project One</a></li>
+                    <li><a href="projject-two.html" style="color: black;">Project Two</a></li>
+                </ul>
+            </li>
+            <li><a href="about-me.html">About Us</a></li>
+            <li><a href="login.html">log in</a></li>
+            <li><a href="help.html" >Help page</a></li>
+        </ul>
+        <!-- Burger icon -->
+        <div class="burger" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+    </nav><br><br>
+
+
+    <div class="help-container" id="body">
+        <h1>Welcome to the Help Page</h1>
+        <p style="color: black;">This page is designed to assist you in navigating and using the "Somali Flag Design" website effectively.</p>
+
+        <h2 style="color: black;">Main Features</h2>
+        <ul style="color: black; font-size: 12px;">
+            <li><strong>• Navbar:</strong> Use the navigation bar at the top to quickly access sections like Chapters, Labs, Assignments, and Projects.</li>
+            <li><strong>• Scroll to Top:</strong> Use the back-to-top button for easy navigation.</li>
+            <li><strong>• Poop Emoji:</strong> A playful animation included to add some fun to the page.</li>
+        </ul>
+
+        <div class="faq">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <button onclick="toggleFaq(this)">What is the purpose of this website?<i class="fa-duotone fa-regular fa-hand-point-down"></i></button>
+                <p style="color: black; font-size: 12px;">This site is designed to explore the Somali flag design and related educational assignments, projects, and labs.</p>
+            </div>
+
+            <div class="faq-item">
+                <button onclick="toggleFaq(this)">How do I access my assignments?<i class="fa-duotone fa-regular fa-hand-point-down"></i></button>
+                <p style="color: black; font-size: 12px;">Click on the "Assignment" link in the navigation bar to view your assignments.</p>
+            </div>
+
+            <div class="faq-item">
+                <button onclick="toggleFaq(this)">Who created this project?<i class="fa-duotone fa-regular fa-hand-point-down"></i></button>
+                <p style="color: black; font-size: 12px;">The project was created as part of an educational initiative to combine creativity with coding.</p>
+            </div>
+        </div>
+
+        
+    
+    </div>
+    <script>
+        function toggleFaq(button) {
+            const answer = button.nextElementSibling;
+            const isVisible = answer.style.display === 'block';
+            answer.style.display = isVisible ? 'none' : 'block';
+        }
+    </script>
+</div> <br><br>
+
+<!-- menu -->
+<a href="index.html" class="back-to-menu">
+    <div class="icon-menu">
+        <i class="fa-duotone fa-solid fa-arrow-left"></i>
+    </div>
+  </a><br>
+<!-- menu -->
+<a href="#top" class="back-to-top">
+    <div class="icon">
+      <i class="fa-solid fa-arrow-up"></i>
+    </div>
+  </a><br>
+
+  <script src="../bootstrap.bundle.min.js"></script>
+    <footer class="container-footer">
+        <h3 class="js">AssingMent</h3><hr>
+        <p>© <span>Copyright</span> <strong class="sitename">Assingment</strong> <span>All Rights Reserved</span></p>   
+    </footer>
+</body>
+</html>

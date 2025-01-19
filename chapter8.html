@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="download.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>AssingMent-js</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <!-- <link href="./css/bootstrap.min.css " rel="stylesheet"> -->
+  <link href="bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+          background: linear-gradient(to right, #f7f7f7, #ffffff);
+          font-family: Arial, sans-serif;
+        }
+        .example-box {
+          margin: 20px 0;
+          padding: 15px;
+          border: 1px solid #dee2e6;
+          border-radius: 5px;
+          background-color: #fff;
+        }
+        footer {
+          margin-top: 50px;
+          text-align: center;
+          padding: 10px 0;
+          background: #f8f9fa;
+          border-top: 1px solid #dee2e6;
+        }
+       /* Toast container */
+.toast-container {
+    position: fixed;
+    top: 20px;
+    right: 500px; /* Default for larger screens */
+    z-index: 1050;
+    display: none;
+    animation: fadeIn 0.5s, fadeOut 0.5s 3s;
+}
+
+/* Toast content */
+.toast-content {
+    background: #067df5;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    max-width: 300px; /* Restrict width for small screens */
+    word-wrap: break-word; /* Ensure long text wraps properly */
+}
+
+/* Fade-in and fade-out animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .toast-container {
+        top: 10px; /* Adjust top spacing for smaller screens */
+        right: 40px; /* Position closer to the edge */
+    }
+
+    .toast-content {
+        padding: 10px 15px; /* Reduce padding for smaller screens */
+        font-size: 14px; /* Smaller font size for compact view */
+    }
+}
+
+@media (max-width: 480px) {
+    .toast-container {
+        top: 5px; /* Further adjust spacing for very small screens */
+        right: 10px;
+    }
+
+    .toast-content {
+        font-size: 12px; /* Further reduce font size */
+        padding: 8px 10px; /* Compact padding */
+    }
+}
+
+      </style>
+</head>
+<body>
+  
+  <div class="flex" id="top">
+    <header> <a href="index.html" ><img src="Untitled Project - New Group (1).png" alt="" width="20%" ></a> &nbsp;&nbsp;&nbsp; Somali Flag Designe</header><br>
+</div>
+
+    <!-- Navbar with burger menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+      <ul class="nav-links">
+          <li><a href="chapters.html" id="main">Chapters</a></li>
+          <li><a href="ExamLap.html">LAP<i class="fa-solid fa-laptop-code"></i></a></li>
+          <li><a href="AssingMent.html">assignment</a></li>
+          <li id="chapter-project">
+              <a href="#" id="Project">Project<i class="fa-solid fa-angle-down"></i></a>
+              <ul class="dropdown">
+                  <li><a href="project-One.html" style="color: black;">Project One</a></li>
+                  <li><a href="projject-two.html" style="color: black;">Project Two</a></li>
+              </ul>
+          </li>
+          <li><a href="about-me.html">About-Us</a></li>
+          <li><a href="login.html">log in</a></li>
+          <li><a href="help.html" >Help page</a></li>
+      </ul>
+      <!-- Burger icon -->
+      <div class="burger" onclick="toggleMenu()">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+      </div>
+  </nav><br><br>
+
+     <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Bootstrap Lab</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#containers">Containers</a></li>
+          <li class="nav-item"><a class="nav-link" href="#buttons">Buttons</a></li>
+          <li class="nav-item"><a class="nav-link" href="#grid">Grid System</a></li>
+          <li class="nav-item"><a class="nav-link" href="#alerts">Alerts</a></li>
+          <li class="nav-item"><a class="nav-link" href="#spinners">Spinners</a></li>
+          <li class="nav-item"><a class="nav-link" href="#modals">Modals</a></li>
+          <li class="nav-item"><a class="nav-link" href="#forms">Forms</a></li>
+          <li class="nav-item"><a class="nav-link" href="#textcolors">Text Colors</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tables">Tables</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container my-5">
+    <h1 class="text-center text-primary bg">Bootstrap Practical Lab</h1>
+
+
+    <!-- Section 1: Container class -->    
+    <section id="containers">
+      <h2>1. Container class example</h2>
+      <div class="example-box">
+        <div class="container"></div>
+        <h1>My First Bootstrap Page</h1>
+        <p>This is some text.</p>
+      </div>    
+    </section>
+
+
+    <!-- Section 2: Container class fluid -->    
+    <section id="containers">
+      <h2>2. Container-fluid class example</h2>
+      <div class="example-box">
+        <div class="container-fluid">
+          <h1>My First Bootstrap Page</h1>
+          <p>This is some text.</p>
+        </div>
+      </div>    
+    </section>
+
+    <!-- Section 3: Containers -->    
+      <section id="container-fluid">
+        <h2>3. Container border and color</h2>
+        <div class="example-box">
+          <div class="container p-5 my-5 border text-dark">first</div>
+          <div class="container p-5 my-5 bg-dark text-white">second</div>
+          <div class="container p-5 my-5 bg-primary text-white">third</div>
+      </section>
+
+
+      <!-- Section 4: Grid System -->
+    <section id="grid">
+      <h2>4. Grid System</h2>
+      <div class="example-box">
+        <h3>Basic Grid Layout</h3>
+        <div class="row">
+          <div class="col-sm-3 bg-dark text-white ">Column 1</div>
+          <div class="col-sm-3 bg-primary text-white ">Column 2</div>
+          <div class="col-sm-4 bg-secondary text-white ">Column 3</div>
+        </div>
+      </div>
+    </section>
+
+
+      <!-- Section 5: Text Colors -->
+      <section id="textcolors">
+        <h2>5. Text Colors</h2>
+        <div class="example-box">
+          <h3>Text Color Variants</h3>
+          <p class="text-muted">This text is muted.</p>
+          <p class="text-primary">This text is important.</p>
+          <p class="text-success">This text indicates success.</p>
+          <p class="text-info">This text represents some information.</p>
+          <p class="text-warning">This text represents a warning.</p>
+          <p class="text-danger">This text represents danger.</p>
+          <p class="text-secondary">Secondary text.</p>
+          <p class="text-dark">Dark grey text.</p>
+          <p class="text-body">Body text.</p>
+          <p class="text-light">Light grey text.</p>
+        </div>
+      </section>
+
+
+        <!-- Section 6: Tables -->
+    <section id="tables">
+      <h2>6. Tables</h2>
+      <div class="example-box">
+        <h3>Basic Table</h3>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Mohamed</td>
+              <td>Abdi</td>
+              <td>Mohamed@abdi.com</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Maryam</td>
+              <td>Ali</td>
+              <td>Maryam@ali.com</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Hussien</td>
+              <td>elmi</td>
+              <td>hussein@elmi.com</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section 7: Buttons -->
+    <section id="buttons">
+      <h2>7. Buttons</h2>
+      <div class="example-box">
+        <h3>Button Variants</h3>
+        <button class="btn btn-primary">Primary</button>
+        <button class="btn btn-secondary">Secondary</button>
+        <button class="btn btn-success">Success</button>
+        <button class="btn btn-info">Info</button>
+        <button class="btn btn-warning">Warning</button>
+        <button class="btn btn-danger">Danger</button>
+        <button class="btn btn-dark">Dark</button>
+        <button class="btn btn-light">Light</button>  
+      </div>
+      <!-- button outline -->
+      <div class="example-box">   
+        <h3>Outline Buttons</h3>
+        <button class="btn btn-outline-primary">Primary</button>
+        <button class="btn btn-outline-secondary">Secondary</button>
+        <button class="btn btn-outline-success">Success</button>
+        <button class="btn btn-outline-info">Info</button>
+        <button class="btn btn-outline-warning">Warning</button>
+        <button class="btn btn-outline-danger">Danger</button>
+        <button class="btn btn-outline-dark">Dark</button>
+        <button class="btn btn-outline-light">Light</button>
+      </div>
+    </section>
+
+    
+    <!-- Section 8: Spinners -->
+    <section id="spinners">
+      <h2>8. Spinners</h2>
+      <div class="example-box">
+        <h3>Loading Spinners</h3>
+        <div class="spinner-border text-muted"></div>
+        <div class="spinner-border text-primary"></div>
+        <div class="spinner-border text-success"></div>
+        <div class="spinner-border text-info"></div>
+        <div class="spinner-border text-warning"></div>
+        <div class="spinner-border text-danger"></div>
+        <div class="spinner-border text-secondary"></div>
+        <div class="spinner-border text-dark"></div>
+        <div class="spinner-border text-light"></div>
+    </section>
+
+    <!-- Section 9: Modals -->
+    <section id="modals">
+        <h2>9. Modals</h2>
+        <div class="example-box">
+          <h3>Modal Example</h3>
+          <!-- Button to Open the Modal -->
+          <button 
+          type="button" 
+          class="btn btn-primary" 
+          data-bs-toggle="modal" 
+          data-bs-target="#myModal"
+          >
+          Open modal
+         </button>
+       
+        
+          <!-- The Modal -->
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Modal Heading</h4>
+        <button 
+          type="button" 
+          class="btn-close" 
+          data-bs-dismiss="modal"
+        ></button>
+      </div>
+      
+      <!-- Modal Body -->
+      <div class="modal-body">
+        Modal body..
+      </div>
+      
+      <!-- Modal Footer -->
+      <div class="modal-footer">
+        <button 
+          type="button" 
+          class="btn btn-danger" 
+          data-bs-dismiss="modal"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+      </section>
+
+      <button type="button" class="btn">Basic</button>
+      <button type="button" class="btn btn-primary">Primary</button>
+      <button type="button" class="btn btn-secondary">Secondary</button>
+      <button type="button" class="btn btn-success">Success</button>
+      <button type="button" class="btn btn-info">Info</button>
+      <button type="button" class="btn btn-warning">Warning</button>
+      <button type="button" class="btn btn-danger">Danger</button>
+      <button type="button" class="btn btn-dark">Dark</button>
+      <button type="button" class="btn btn-light">Light</button>
+      <button  type="button" class="btn btn-link">Link</button>
+
+  
+      <!-- Section 10: Forms -->
+        
+      <section id="forms" style="background: rgb(24, 205, 75); border-radius: 20px;">
+            <div class="container">
+                <h2 class="text-center mb-4">Registration Form</h2>
+                <form id="registrationForm" novalidate>
+                    <div class="mb-3">
+                        <label for="email" style="color: #030303;">Email address</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+                        <div class="error" id="emailError"></div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password"  style="color: #000000;">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter password" required>
+                        <div class="error" id="passwordError"></div>
+                    </div>
+                    <button type="submit" class="btn w-100" style="background: #044280; color: #fff;">submit</button>
+                </form>
+                
+            </div>
+        </div>
+      </section>
+    
+  <!-- Toast Notification -->
+<div id="toast" class="toast-container">
+  <div class="toast-content">
+      <p id="toastMessage">Form submitted successfully!</p>
+  </div>
+</div>
+    
+    </div>
+
+    <br>
+    
+    <script>
+      document.getElementById('registrationForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        let isValid = true;
+
+        // Clear previous errors
+        document.getElementById('emailError').textContent = '';
+        document.getElementById('passwordError').textContent = '';
+
+        // Validate email
+        const email = document.getElementById('email').value.trim();
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+            document.getElementById('emailError').textContent = 'Please enter a valid email address.';
+            isValid = false;
+        }
+
+        // Validate password
+        const password = document.getElementById('password').value;
+        if (password.length < 6) {
+            document.getElementById('passwordError').textContent = 'Password must be at least 6 characters long.';
+            isValid = false;
+        }
+
+        // Show toast if form is valid
+        if (isValid) {
+            showToast('Form submitted successfully!');
+            document.getElementById('registrationForm').reset();
+        }
+    });
+
+    // Function to show the toast
+    function showToast(message) {
+        const toast = document.getElementById('toast');
+        const toastMessage = document.getElementById('toastMessage');
+        toastMessage.textContent = message;
+        toast.style.display = 'block';
+
+        // Hide the toast after 3.5 seconds
+        setTimeout(() => {
+            toast.style.display = 'none';
+        }, 3500);
+    }
+  </script> 
+
+  <!-- menu -->
+<a href="chapters.html" class="back-to-menu">
+  <div class="icon-menu">
+      <i class="fa-duotone fa-solid fa-arrow-left"></i>
+  </div>
+</a><br>
+<!-- menu -->
+
+  <a href="#top" class="back-to-top">
+    <div class="icon">
+      <i class="fa-solid fa-arrow-up"></i>
+    </div>
+  </a><br>
+
+           <footer class="container-footer">
+            <h3 class="js">AssingMent-js</h3><hr>
+            <p>© <span>Copyright</span> <strong class="sitename">AssingMent-js</strong> <span>All Rights Reserved</span></p>   
+        </footer>
+
+        <script src="bootstrap.bundle.min.js"></script>
+</body>
+</html>

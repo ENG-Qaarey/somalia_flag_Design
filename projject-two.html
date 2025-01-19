@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="download.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>AssingMent-js</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+    
+</head>
+<body>
+   
+    
+
+    <div class="flex" id="top">
+        <header > <a href="index.html" ><img src="Untitled Project - New Group (1).png" alt="" width="20%" ></a> &nbsp;&nbsp;&nbsp; Somali Flag Designe</header><br>
+    </div>
+
+    <!-- Navbar with burger menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+        <ul class="nav-links">
+            <li><a href="chapters.html" id="main">Chapters</a></li>
+            <li><a href="ExamLap.html">Lab<i class="fa-solid fa-laptop-code"></i></a></li>
+            <li><a href="AssingMent.html">Assignment</a></li>
+            <li id="chapter-project">
+                <a href="#" id="Project">Project<i class="fa-solid fa-angle-down"></i></a>
+                <ul class="dropdown">
+                    <li><a href="project-One.html" style="color: black;">Project One</a></li>
+                    <li><a href="projject-two.html" style="color: black;">Project Two</a></li>
+                </ul>
+            </li>
+            <li><a href="about-me.html">About Us</a></li>
+            <li><a href="login.html">log in</a></li> 
+            <li><a href="help.html" >Help page</a></li>
+        </ul>
+        <!-- Burger icon -->
+        <div class="burger" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav><br><br>
+
+<center>
+    <div class="container9">
+        <h1 id="h11">Somalia Regional Flags</h1>
+        <input id="region-input" class="input3" type="text" placeholder="Enter a region name">
+        <button id="show-flag" class="btn67">Show Flag</button>
+        <div id="flag">
+            <img id="somalia-flag" class="flag-image" src="somalia.jpeg" alt="somalia Flag">
+            <img id="puntland-flag" class="flag-image" src="puntland.png" alt="Puntland Flag">
+            <img id="hirshabele-flag" class="flag-image" src="hirshabele.png" alt="hirshabele Flag">
+            <img id="somaliland-flag" class="flag-image" src="somaliland.png" alt="Somaliland Flag">
+            <img id="konfurgalbed-flag" class="flag-image" src="image/konfurgalbed.png" alt="konfurgalbed Flag">
+            <img id="jubaland-flag" class="flag-image" src="jubaland.png" alt="Jubaland Flag">
+            <img id="galmudug-flag" class="flag-image" src="galmudug.png" alt="Galmudug Flag">
+            <img id="benaadir-flag" class="flag-image" src="benaadir.png" alt="benaadir Flag">
+        </div>
+        <div id="custom-alert" class="custom-alert">Region not found. Please enter a valid region.</div>
+    </div>
+</center>
+   <br><br>
+<script>
+
+    
+document.getElementById('show-flag').addEventListener('click', function() {
+    const region = document.getElementById('region-input').value.trim().toLowerCase();
+    const flags = document.querySelectorAll('.flag-image');
+    const alertBox = document.getElementById('custom-alert');
+    const flagContainer = document.getElementById('flag');
+
+    // Hide all flags
+    flags.forEach(flag => flag.style.display = 'none');
+
+    // Match region to flag ID and display the corresponding flag
+    const flagMap = {
+        'somalia': 'somalia-flag',
+        'hirshabele': 'hirshabele-flag',
+        'konfurgalbed': 'konfurgalbed-flag',
+        'puntland': 'puntland-flag',
+        'somaliland': 'somaliland-flag',
+        'jubaland': 'jubaland-flag',
+        'galmudug': 'galmudug-flag',
+        'benaadir': 'benaadir-flag',
+    };
+
+    const flagId = flagMap[region];
+    if (flagId) {
+        alertBox.style.display = 'none';
+        flagContainer.style.display = 'flex'; // Show flag container
+        document.getElementById(flagId).style.display = 'block';
+    } else {
+        flagContainer.style.display = 'none'; // Hide flag container
+        alertBox.innerText = 'Please enter a region name.';
+        alertBox.style.display = 'block';
+
+        // Hide alert after 3 seconds
+        setTimeout(() => {
+            alertBox.style.display = 'none';
+        }, 4000);
+    }
+});
+</script>
+<!-- menu -->
+<a href="index.html" class="back-to-menu">
+    <div class="icon-menu">
+        <i class="fa-duotone fa-solid fa-arrow-left"></i>
+    </div>
+  </a><br>
+  <!-- menu -->
+
+<a href="#top" class="back-to-top">
+    <div class="icon">
+      <i class="fa-solid fa-arrow-up"></i>
+    </div>
+  </a><br>
+  <script defer src="../JavaScript/main.js"></script>
+  <script src="../bootstrap.bundle.min.js"></script>
+    <footer class="container-footer">
+        <h3 class="js">AssingMent</h3><hr>
+        <p>© <span>Copyright</span> <strong class="sitename">AssingMent</strong> <span>All Rights Reserved</span></p>   
+    </footer>
+</body>
+</html>

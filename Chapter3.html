@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="download.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>AssingMent-js</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+    
+</head>
+<body>
+  
+    <div class="flex" id="top">
+        <header > <a href="index.html" ><img src="Untitled Project - New Group (1).png" alt="" width="20%" ></a> &nbsp;&nbsp;&nbsp; Somali Flag Designe</header><br>
+    </div>
+
+    <!-- Navbar with burger menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+        <ul class="nav-links">
+            <li><a href="chapters.html" id="main">Chapters</a></li>
+            <li><a href="ExamLap.html">LAP<i class="fa-solid fa-laptop-code"></i></a></li>
+            <li><a href="AssingMent.html">assignment</a></li>
+            <li id="chapter-project">
+                <a href="#" id="Project">Project<i class="fa-solid fa-angle-down"></i></a>
+                <ul class="dropdown">
+                    <li><a href="project-One.html" style="color: black;">Project One</a></li>
+                    <li><a href="projject-two.html" style="color: black;">Project Two</a></li>
+                </ul>
+            </li>
+            <li><a href="about-me.html">About-Us</a></li>
+            <li><a href="login.html">log in</a></li>
+            <li><a href="help.html" >Help page</a></li>
+        </ul>
+        <!-- Burger icon -->
+        <div class="burger" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav><br><br>
+
+    
+    
+        <center>
+            <section class="ch2">
+                
+                <div class="chapter2">
+                    <h3>1. template letrals.</h3>
+                    <button id="ch3_reader1" class="button1">Click Here</button>
+                </div>
+    
+                <p id="btn01" class="output"></p>
+    
+                <!-- logical Oprator -->
+                <div class="chapter2">
+                    <h3>2. logical Oprator.</h3>
+                    <button id="ch3_reader2" class="button1">Click Here</button>
+                </div>
+    
+                <p id="btn02" class="output"></p>
+                 
+                <!-- if Statement -->
+                <div class="chapter2">
+                    <h3>3. if Statement.</h3>
+                    <button id="ch3_reader3" class="button1">Click Here</button>
+                </div>
+    
+                <p id="btn03" class="output"></p>
+
+                <!-- check grad -->
+                <div class="chapter2">
+                    <h3>4. check grad.</h3>
+                    <button id="ch3_reader4" class="button1">Click Here</button>
+                </div>
+    
+                <p id="btn04" class="output"></p>
+
+
+                <!-- check grad -->
+                <div class="chapter2">
+                    <h3>5. for loop.</h3>
+                    <button id="ch3_reader5" class="button1">Click Here</button>
+                </div>
+    
+                <p id="btn05" class="output"></p>
+
+                <!-- Day Of The Week -->
+                <div class="chapter2">
+                    <h3>6. Day Of The Week.</h3>
+                    <button id="ch3_reader6" class="button1">Click Here</button>
+                </div>
+    
+                <p id="btn06" class="output"></p>
+
+                <!-- Statement  -->
+                <div class="chapter2">
+                    <h3>7. Statement.</h3>
+                    <button id="ch3_reader7" class="button1">Click Here</button>
+                </div>
+    
+                <p id="btn07" class="output"></p>
+    
+            </section>
+            
+        </center>
+
+
+        <script>
+
+   ch3_reader1.onclick = function() {
+    const age3 = 30;
+    let messages1 = "I am " + age3 + "years.i live in mogadishu..";
+    // const messages2 =`my age is ${age} years.i live in mogadishu.`;
+    const output = document.getElementById('btn01');
+    output.innerHTML = messages1;
+    output.classList.toggle('show');
+
+   };
+
+
+   ch3_reader2.onclick = function() {
+    
+    let a = 15;
+    let b = 56;
+
+    let messages01 = "after swapping: a=" + a + ",b="+b;
+    // const messages2 =`my age is ${age} years.i live in mogadishu.`;
+    const output = document.getElementById('btn02');
+    output.innerHTML = messages01;
+    output.classList.toggle('show');
+
+};
+
+    ch3_reader3.onclick = function(){
+            let age = parseInt(prompt("Enter Your Age: "), 7);
+            if (age => 15) {
+                let b = "You Are Adult.";
+                const output = document.getElementById('btn03');
+                output.innerHTML = b;
+                output.classList.toggle('show');
+            } 
+            else {
+                let c = "You Are A Minor."
+                const output = document.getElementById('btn03');
+                output.innerHTML = c;
+                output.classList.toggle('show');
+            }
+        };
+
+
+
+
+        ch3_reader4.onclick = function(){
+            let grad = parseInt(prompt("Enter Your Grade: "), 10);
+            if (grad >= 90) {
+                let d = "grad (A)";
+                const output = document.getElementById('btn04');
+                output.innerHTML = d;
+                output.classList.toggle('show');
+            } else if (grad >= 80) {
+                let e = "grad (B)";
+                const output = document.getElementById('btn04');
+                output.innerHTML = e;
+                output.classList.toggle('show');
+            } else {
+                let f = "grad (C)";
+                const output = document.getElementById('btn04');
+                output.innerHTML = f;
+                output.classList.toggle('show');
+            }
+        };
+
+
+        ch3_reader5.onclick = function(){
+            for (let i =1; i<=7; ++i){
+                const output = document.getElementById('btn05');
+                output.innerHTML = i;
+                output.classList.toggle('show');
+    }
+}
+        ch3_reader6.onclick = function(){
+            let day = prompt("Enter Any Day Of The Week by !(Number): ");
+            switch (day) {
+                case "saturday":
+                    let g = "It's the start of the week.";
+                    const output = document.getElementById('btn06');
+                    output.innerHTML = g;
+                    output.classList.toggle('show');
+                    break;
+                case "wednesday":
+                    let h = "It's almost the weekend.";
+                    const output2 = document.getElementById('btn06');
+                    output2.innerHTML = h;
+                    output2.classList.toggle('show');
+                    break;
+                default:
+                    alert("");
+                    let i = "It's a regular day.";
+                    const output3 = document.getElementById('btn06');
+                    output3.innerHTML = i;
+                    output3.classList.toggle('show');
+            }
+        };
+
+        ch3_reader7.onclick = function(){
+            for (let i = 0; i < 5; i++) {
+                if (i ===3) {
+                break; // Exit the loop when i equals 3
+            }
+            const output = document.getElementById('btn07');
+            output.innerHTML = i;
+            output.classList.toggle('show');
+       }
+    }
+        </script>
+
+    <!-- menu -->
+<a href="chapters.html" class="back-to-menu">
+    <div class="icon-menu">
+        <i class="fa-duotone fa-solid fa-arrow-left"></i>
+    </div>
+  </a><br>
+<!-- menu -->
+
+           <a href="#top" class="back-to-top">
+            <div class="icon">
+              <i class="fa-solid fa-arrow-up"></i>
+            </div>
+          </a><br>
+
+           <footer class="container-footer">
+            <h3 class="js">AssingMent-js</h3><hr>
+            <p>© <span>Copyright</span> <strong class="sitename">AssingMent-js</strong> <span>All Rights Reserved</span></p>   
+        </footer>  
+
+       <script src="../JavaScript/main.js"></script>
+</body>
+</html>

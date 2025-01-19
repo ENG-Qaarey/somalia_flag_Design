@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="download.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>AssingMent-js</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+</head>
+<body>
+  
+    <div class="flex" id="top">
+        <header > <a href="index.html" ><img src="Untitled Project - New Group (1).png" alt="" width="20%" ></a> &nbsp;&nbsp;&nbsp; Somali Flag Designe</header><br>
+    </div>
+
+    <!-- Navbar with burger menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+        <ul class="nav-links">
+            <li><a href="chapters.html" id="main">Chapters</a></li>
+            <li><a href="ExamLap.html">LAP<i class="fa-solid fa-laptop-code"></i></a></li>
+            <li><a href="AssingMent.html">assignment</a></li>
+            <li id="chapter-project">
+                <a href="#" id="Project">Project<i class="fa-solid fa-angle-down"></i></a>
+                <ul class="dropdown">
+                    <li><a href="project-One.html" style="color: black;">Project One</a></li>
+                    <li><a href="projject-two.html" style="color: black;">Project Two</a></li>
+                </ul>
+            </li>
+            <li><a href="about-me.html">About-Us</a></li>
+            <li><a href="login.html">log in</a></li>
+            <li><a href="help.html" >Help page</a></li>
+        </ul>
+        <!-- Burger icon -->
+        <div class="burger" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav><br><br>
+                
+    <center><button onclick="Quation1()" class="button1">Write code to display your full name in one line using console.log only &nbsp;&nbsp;<br></button></center><br>
+    <center><button onclick="Quation2()" class="button1">Write code displays what you do from 5:00Am up to now using switch case</button></center><br>
+    <center>
+        <button onclick="displayCalculator()" class="button1">Display Calculator👇</button>
+    </center>
+    <div id="calculator-container"></div>
+      
+<br>
+
+<!-- menu -->
+<a href="index.html" class="back-to-menu">
+    <div class="icon-menu">
+        <i class="fa-duotone fa-solid fa-arrow-left"></i>
+    </div>
+  </a><br>
+  <!-- menu -->
+
+    <a href="#top" class="back-to-top">
+        <div class="icon">
+          <i class="fa-solid fa-arrow-up"></i>
+        </div>
+      </a><br>
+
+    <footer class="container-footer">
+        <h3 class="js">AssingMent-js</h3><hr>
+        <p>© <span>Copyright</span> <strong class="sitename">AssingMent-js</strong> <span>All Rights Reserved</span></p>   
+    </footer>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="download.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>AssingMent-js</title>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="main.js"></script>
+</head>
+<body>
+   
+    
+
+  <div class="flex" id="top">
+    <header > <a href="index.html" ><img src="Untitled Project - New Group (1).png" alt="" width="20%" ></a> &nbsp;&nbsp;&nbsp; Somali Flag Designe</header><br>
+</div>
+
+    <!-- Navbar with burger menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+        <ul class="nav-links">
+            <li><a href="chapters.html" id="main">Chapters</a></li>
+            <li><a href="ExamLap.html">Lab<i class="fa-solid fa-laptop-code"></i></a></li>
+            <li><a href="AssingMent.html">Assignment</a></li>
+            <li id="chapter-project">
+                <a href="#" id="Project">Project<i class="fa-solid fa-angle-down"></i></a>
+                <ul class="dropdown">
+                    <li><a href="project-One.html" style="color: black;">Project One</a></li>
+                    <li><a href="projject-two.html" style="color: black;">Project Two</a></li>
+                </ul>
+            </li>
+            <li><a href="about-me.html">About Us</a></li>
+            <li><a href="about-me.html">log in</a></li>
+            <li><a href="help.html" >Help page</a></li>
+        </ul>
+        <!-- Burger icon -->
+        <div class="burger" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav><br><br>
+
+    <center>
+    <div class="card" id="body">
+        <div class="text-center mb-4" style="text-align: center; margin-bottom: 20px;">
+          <label for="profile-pic-input">
+            <img src="images.jpeg" width="60%" alt="Profile Picture" id="profile-pic" class="profile-pic">
+          </label>
+          <input type="file" id="profile-pic-input" accept="image/*" style="display: none;">
+        </div>
+        <form id="login-form" novalidate>
+          <div class="form-group">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            <small class="error-message" id="email-error" style="color: red; display: none;">Please enter a valid email address.</small>
+          </div>
+          <div class="form-group">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+            <small class="error-message" id="password-error" style="color: red; display: none;">
+              Password must be at least 8 characters, include a number, and a special character.
+            </small>
+          </div>
+          <button type="submit" class="btn">Login</button>
+        </form>
+        <div class="alert" role="alert" style="display: none;"></div>
+
+      </div>
+
+    </center>
+    <script>
+        const profilePic = document.getElementById('profile-pic');
+        const profilePicInput = document.getElementById('profile-pic-input');
+        const loginForm = document.getElementById('login-form');
+        const alertBox = document.querySelector('.alert');
+    
+        profilePicInput.addEventListener('change', (event) => {
+          const file = event.target.files[0];
+          if (file) {
+            const reader = new FileReader();
+            reader.onload = () => {
+              profilePic.src = reader.result;
+            };
+            reader.readAsDataURL(file);
+          }
+        });
+    
+        document.getElementById('login-form').addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const emailInput = document.getElementById('email');
+  const passwordInput = document.getElementById('password');
+  const emailError = document.getElementById('email-error');
+  const passwordError = document.getElementById('password-error');
+  const alertBox = document.querySelector('.alert');
+
+  let isValid = true;
+
+  // Validate Email
+  const emailValue = emailInput.value.trim();
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Standard email format
+  if (!emailRegex.test(emailValue)) {
+    emailError.style.display = 'block';
+    emailInput.classList.add('is-invalid');
+    isValid = false;
+  } else {
+    emailError.style.display = 'none';
+    emailInput.classList.remove('is-invalid');
+  }
+
+  // Validate Password
+  const passwordValue = passwordInput.value.trim();
+  const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/; // At least 8 characters, 1 letter, 1 number, 1 special char
+  if (!passwordRegex.test(passwordValue)) {
+    passwordError.style.display = 'block';
+    passwordInput.classList.add('is-invalid');
+    isValid = false;
+  } else {
+    passwordError.style.display = 'none';
+    passwordInput.classList.remove('is-invalid');
+  }
+
+  if (isValid) {
+    alertBox.style.display = 'block';
+    alertBox.style.color = 'green';
+    alertBox.innerHTML = '<i style="color: green; margin-right: 5px;">✔</i> Your login was successful!';
+    setTimeout(() => {
+      alertBox.style.display = 'none';
+      document.getElementById('login-form').reset();
+    }, 3000);
+  }
+});
+
+      </script>
+
+</div> <br><br>
+
+<!-- menu -->
+<a href="index.html" class="back-to-menu">
+    <div class="icon-menu">
+        <i class="fa-duotone fa-solid fa-arrow-left"></i>
+    </div>
+  </a><br>
+  
+<!-- menu -->
+<a href="#top" class="back-to-top">
+    <div class="icon">
+      <i class="fa-solid fa-arrow-up"></i>
+    </div>
+  </a><br>
+
+  <script src="../bootstrap.bundle.min.js"></script>
+    <footer class="container-footer">
+        <h3 class="js">AssingMent</h3><hr>
+        <p>© <span>Copyright</span> <strong class="sitename">Assingment</strong> <span>All Rights Reserved</span></p>   
+    </footer>
+</body>
+</html>

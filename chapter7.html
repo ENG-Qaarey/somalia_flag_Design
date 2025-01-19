@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="download.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>AssingMent-js</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+</head>
+<body>
+
+    <div class="flex" id="top">
+        <header > <a href="index.html" ><img src="Untitled Project - New Group (1).png" alt="" width="20%" ></a> &nbsp;&nbsp;&nbsp; Somali Flag Designe</header><br>
+    </div>
+
+    <!-- Navbar with burger menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+        <ul class="nav-links">
+            <li><a href="chapters.html" id="main">Chapters</a></li>
+            <li><a href="ExamLap.html">LAP<i class="fa-solid fa-laptop-code"></i></a></li>
+            <li><a href="AssingMent.html">assignment</a></li>
+            <li id="chapter-project">
+                <a href="#" id="Project">Project<i class="fa-solid fa-angle-down"></i></a>
+                <ul class="dropdown">
+                    <li><a href="project-One.html" style="color: black;">Project One</a></li>
+                    <li><a href="projject-two.html" style="color: black;">Project Two</a></li>
+                </ul>
+            </li>
+            <li><a href="about-me.html">About-Us</a></li>
+            <li><a href="login.html">log in</a></li>
+            <li><a href="help.html" >Help page</a></li>
+        </ul>
+        <!-- Burger icon -->
+        <div class="burger" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav><br><br>
+
+<center>
+    <div class="container">
+        <h2>Interactive Events Example</h2><br>
+
+        <!-- Event Listener -->
+        <button id="myButton">Click Me!</button><br><br>
+
+        <!-- Inline Event Handler -->
+        <button onclick="func()">Inline Event Handler</button><br><br>
+    
+
+
+    <!-- Mouse Events -->
+     <center>
+     <div id="myel">Hover Over Me</div><br><br>
+     </center>
+
+     <!-- keyboard events -->
+    <input type="text" id="text" placeholder="Type Something">
+    <div id="output"></div><br><br>
+
+
+    <!-- Focus events -->
+    <input type="text" id="text2" placeholder="Type Something">
+    <div id="output2"></div><br><br>
+
+
+    <!-- focus element in form -->
+     <form id="myform">
+        <input type="text" id="textinp" placeholder="Type Something">
+        <button type="submit">Submit</button>
+     </form>
+     <div id="foutput"></div>
+
+    <!-- Event Delegation Using A Single Event Listener On The Parent Element -->
+     <ul id="parentList">
+        <li class="li">Item 1</li>
+        <li class="li">Item 2</li>
+        <li class="li">Item 3</li>
+        <li class="li">Item 4</li>
+</ul>
+</div>
+</center>
+<script>
+    const element = document.getElementById("myButton");
+element.addEventListener("click", myfun);
+function myfun(){
+alert("Button Clicked!")
+}
+
+
+// inline event handler
+function func(){
+alert("Button Clicked!")
+}
+
+
+// mouse event
+let element2 = document.getElementById("myel");
+element2.addEventListener("mouseover",function(){
+element2.style.backgroundColor = "green";
+});
+element2.addEventListener("mouseout",function(){
+element2.style.backgroundColor = "blue";
+});
+
+
+//keyboard event
+const textinput = document.getElementById("text");
+const outputdiv = document.getElementById("output");
+textinput.addEventListener("keydown", function (event){
+outputdiv.innerText = `Keydown: ${event.key}`;
+});
+textinput.addEventListener("keypress", function (event){
+outputdiv.innerText += `\nKeypress: ${event.key}`;
+});
+textinput.addEventListener("keyup", function (event){
+outputdiv.innerText += `\nKeyup: ${event.key}`;
+});
+
+
+//Focus events
+const textinput2 = document.getElementById("text2");
+const outputdiv2 = document.getElementById("output2");
+textinput2.addEventListener("focus", function (){
+updateOutput("focused");
+});
+textinput2.addEventListener("blur", function (){
+updateOutput("blurred");
+});
+function updateOutput(className){
+outputdiv2.className = className;
+}
+
+
+//form focus
+const textinp = document.getElementById("textinp");
+const outdiv = document.getElementById("foutput");
+const form = document.getElementById("myform");
+textinp.addEventListener("input", function () {
+if (textinp.value != "") {
+    updateOutput2("input changed!", "valid");
+} else {
+    updateOutput2("input changed with empty!", "invalid");
+}
+});
+form.addEventListener("submit", function (event) {
+event.preventDefault();
+updateOutput2("form submitted!", "valid");
+});
+function updateOutput2(message2, classname2) {
+outdiv.innerText = message2;
+outdiv.className = classname2;
+}
+
+
+//Event Delegation Using A Single Event Listener On The Parent Element
+const parentList = document.getElementById("parentList");
+parentList.addEventListener("click", function(event){
+if(event.target.tagName === "LI"){
+    alert("Clicked on: "+event.target.innerText);
+}
+});
+
+// Function to toggle the menu visibility on mobile screens
+function toggleMenu() {
+const navLinks = document.querySelector('.nav-links');
+navLinks.classList.toggle('active');
+}
+
+</script>
+
+    <br>
+
+    <!-- menu -->
+<a href="chapters.html" class="back-to-menu">
+    <div class="icon-menu">
+        <i class="fa-duotone fa-solid fa-arrow-left"></i>
+    </div>
+  </a><br>
+<!-- menu -->
+
+    <a href="#top" class="back-to-top">
+        <div class="icon">
+          <i class="fa-solid fa-arrow-up"></i>
+        </div>
+      </a><br>
+
+    <footer class="container-footer">
+        <h3 class="js">AssingMent</h3><hr>
+        <p>© <span>Copyright</span> <strong class="sitename">AssingMent</strong> <span>All Rights Reserved</span></p>   
+    </footer>
+ 
+    <script src="../JavaScript/main.js"></script>
+</body>
+</html>

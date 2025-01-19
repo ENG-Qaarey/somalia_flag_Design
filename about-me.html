@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="download.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>AssingMent-js</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+    <style>
+        /* Importing Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap');
+    
+        /* General reset for padding and margin
+    
+        /* Styling the container of the 'about' section */
+        .about {
+            width: 80%;
+            max-width: 600px;
+            margin: 60px auto;
+            margin-top: -36px;
+            padding: 40px;
+            background: linear-gradient(135deg, #3a5b9e, #4c7dbf); /* Gradient background */
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+    
+        /* Fade-in animation for the whole section */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    
+        /* Hover effect for the whole card */
+        .about:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+    
+        /* Styling the image */
+        .about img {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+    
+        /* Hover effect for the image */
+        .about img:hover {
+            transform: scale(1.15) rotate(5deg);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+    
+        /* Styling the name heading */
+        .about h2 {
+            font-size: 30px;
+            margin-bottom: 15px;
+            color: #ffffff; /* White text for name */
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            letter-spacing: 1px;
+            animation: fadeInText 1s ease-out 0.4s forwards;
+        }
+    
+        /* Styling the paragraph text */
+        .about p {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #f4f7fb; /* Light text for contrast */
+            animation: fadeInText 1s ease-out 0.6s forwards;
+        }
+    
+        .about strong {
+            color: #ffffff; /* White color for emphasized text */
+        }
+    
+        /* Animation for text elements */
+        @keyframes fadeInText {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .about {
+                width: 90%;
+                padding: 30px;
+            }
+    
+            .about img {
+                width: 160px;
+                height: 160px;
+            }
+    
+            .about h2 {
+                font-size: 26px;
+            }
+    
+            .about p {
+                font-size: 16px;
+            }
+        }
+    </style>
+    
+    <link rel="stylesheet" href="../CSS/style.css">
+    <script src="../JavaScript/main.js"></script>
+</head>
+<body>
+  
+    <div class="flex" id="top">
+        <header > <a href="index.html" ><img src="Untitled Project - New Group (1).png" alt="" width="20%" ></a> &nbsp;&nbsp;&nbsp; Somali Flag Designe</header><br>
+    </div>
+
+    <!-- Navbar with burger menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+        <ul class="nav-links">
+            <li><a href="chapters.html" id="main">Chapters</a></li>
+            <li><a href="ExamLap.html">LAP<i class="fa-solid fa-laptop-code"></i></a></li>
+            <li><a href="AssingMent.html">assignment</a></li>
+            <li id="chapter-project">
+                <a href="#" id="Project">Project<i class="fa-solid fa-angle-down"></i></a>
+                <ul class="dropdown">
+                    <li><a href="project-One.html" style="color: black;">Project One</a></li>
+                    <li><a href="projject-two.html" style="color: black;">Project Two</a></li>
+                </ul>
+            </li>
+            <li><a href="about-me.html">About-Us</a></li>
+            <li><a href="login.html">log in</a></li>
+            <li><a href="help.html" >Help page</a></li>
+        </ul>
+        <!-- Burger icon -->
+        <div class="burger" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav><br><br>
+
+
+    <center><h1 style="z-index: -999; color: #0e9ae5;">About-Us</h1></center><br>
+    <center><br>
+   
+        
+        </center><br>
+        <div class="about">
+        <img src="muscab2.jpg" alt="muscab" height="200px" width="200px"> 
+        <p ><strong style="color: rgb(7, 211, 7);">NAME :&nbsp;</strong>muscab axmed maxamuud</p>
+        <h4><strong style="color: rgb(7, 211, 7);">ID :&nbsp;</strong><span style="color: #ffffff;">CS 1400837</span> </h4>
+        <p ><strong style="color: rgb(7, 211, 7);">UNICERSITY:&nbsp;</strong>jazeera University</p>
+        <p ><strong style="color: rgb(7, 211, 7);">Facult Of:&nbsp;</strong>Computer sceines & iT</p>
+        <p ><strong style="color: rgb(7, 211, 7);"><i class="fas fa-user-tie">&nbsp;</i>Course Teacher :&nbsp;</strong>Ustaad Jamiila</p>
+        </div>
+
+
+        <!-- menu -->
+<a href="index.html" class="back-to-menu">
+    <div class="icon-menu">
+        <i class="fa-duotone fa-solid fa-arrow-left"></i>
+    </div>
+  </a><br>
+<!-- menu -->
+
+        <a href="#top" class="back-to-top">
+            <div class="icon">
+              <i class="fa-solid fa-arrow-up"></i>
+            </div>
+          </a><br>
+
+        <footer class="container-footer">
+            <h3 class="js">AssingMent-js</h3><hr>
+            <p>© <span>Copyright</span> <strong class="sitename">AssingMent-js</strong> <span>All Rights Reserved</span></p>   
+        </footer>
+</body>
+</html>

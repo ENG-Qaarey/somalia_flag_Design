@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="download.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>AssingMent-js</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+    
+</head>
+<body>
+  
+    <div class="flex" id="top">
+        <header > <a href="index.html" ><img src="Untitled Project - New Group (1).png" alt="" width="20%" ></a> &nbsp;&nbsp;&nbsp; Somali Flag Designe</header><br>
+    </div>
+
+    <!-- Navbar with burger menu -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+        <ul class="nav-links">
+            <li><a href="chapters.html" id="main">Chapters</a></li>
+            <li><a href="ExamLap.html">LAP<i class="fa-solid fa-laptop-code"></i></a></li>
+            <li><a href="AssingMent.html">assignment</a></li>
+            <li id="chapter-project">
+                <a href="#" id="Project">Project<i class="fa-solid fa-angle-down"></i></a>
+                <ul class="dropdown">
+                    <li><a href="project-One.html" style="color: black;">Project One</a></li>
+                    <li><a href="projject-two.html" style="color: black;">Project Two</a></li>
+                </ul>
+            </li>
+            <li><a href="about-me.html">About-Us</a></li>
+            <li><a href="login.html">log in</a></li>
+            <li><a href="help.html" >Help page</a></li>
+        </ul>
+        <!-- Burger icon -->
+        <div class="burger" onclick="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav><br><br>
+
+    
+    
+     <div class="chapter2">     
+    <button id="p_reader" class="button1">DOM Slection example</button><br>
+    <p id="BTN1"></p><br><br>
+     </div>
+    <div>
+     <!-- 2 -->
+    <p id="content">This Is a Paragraph within the container</p>
+    </div>
+
+<!-- 3 -->
+<div class="box">
+    <p class="p" class="boxContent">This Is the content of the box</p>
+</div>
+
+<div class="box">
+    <p class="p" class="boxContent">Another box with diffrent content</p>
+</div>
+
+<!-- 6.css style propert -->
+<a href="" id="mylink">This is the link!</a><br><br>
+
+<!-- 7. innertext and textcontent -->
+<p id="paragraph"></p>
+
+<!-- 8 setattribute -->
+<a id="my_link" href="">The text decoration removed by attribute that created as setattribute</a>
+
+<!-- creating element -->
+<p id="pargr"></p>
+
+<!-- replce elemnt -->
+<p id="pragraph">This the old text of this pragraph</p>
+
+<!-- insert element before another element -->
+<p id="pragraph2"></p>
+<span id="span2">This is the exising text of the span</span><br><br>
+
+<!-- menu -->
+<a href="chapters.html" class="back-to-menu">
+    <div class="icon-menu">
+        <i class="fa-duotone fa-solid fa-arrow-left"></i>
+    </div>
+  </a><br>
+<!-- menu -->
+
+
+<a href="#top" class="back-to-top">
+    <div class="icon">
+      <i class="fa-solid fa-arrow-up"></i>
+    </div>
+  </a><br>
+    
+  <script>
+p_reader.onclick = function(){
+    let contentElement = document.getElementById("BTN1");
+    contentElement.style.background = "blue";
+    contentElement.style.color = "white";
+    contentElement.style.fontFamily = "Arial, Helvetica, sans-serif";
+    contentElement.style.borderRadius = "8px";
+    contentElement.style.padding = "8px";
+    contentElement.style.width = "46%";
+    contentElement.style.fontSize = "1.3em";
+
+
+    document.getElementById('BTN1').innerHTML = "this is pragraph within the container";
+}
+  </script>
+           <footer class="container-footer">
+            <h3 class="js">AssingMent-js</h3><hr>
+            <p>© <span>Copyright</span> <strong class="sitename">AssingMent-js</strong> <span>All Rights Reserved</span></p>   
+        </footer>
+
+        <script defer src="../JavaScript/main.js"></script>
+</body>
+</html>

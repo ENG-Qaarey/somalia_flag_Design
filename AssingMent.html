@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="download.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>AssingMent-js</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+    
+</head>
+<body>
+  
+    <div class="flex" id="top">
+        <header > <a href="index.html" ><img src="Untitled Project - New Group (1).png" alt="" width="20%" ></a> &nbsp;&nbsp;&nbsp; Somali Flag Designe</header><br>
+    </div>
+
+<!-- Navbar with burger menu -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+    <ul class="nav-links">
+        <li><a href="chapters.html" id="main">Chapters</a></li>
+        <li><a href="ExamLap.html">LAP<i class="fa-solid fa-laptop-code"></i></a></li>
+        <li><a href="AssingMent.html">assignment</a></li>
+        <li id="chapter-project">
+            <a href="#" id="Project">Project<i class="fa-solid fa-angle-down"></i></a>
+            <ul class="dropdown">
+                <li><a href="project-One.html" style="color: black;">Project One</a></li>
+                <li><a href="projject-two.html" style="color: black;">Project Two</a></li>
+            </ul>
+        </li>
+        <li><a href="about-me.html">About-Us</a></li>
+        <li><a href="login.html">log in</a></li>
+        <li><a href="help.html" >Help page</a></li>
+    </ul>
+    <!-- Burger icon -->
+    <div class="burger" onclick="toggleMenu()">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+</nav><br><br>
+
+    <div class="hello">
+      <button onclick="run2()" class="button1">Check Operations</button>
+      <p id="display"></p>
+    </div><br><br>
+  <center>  <div class="wrapper1">
+    <div class="small1">
+        <div class="small21">
+            <h3>
+                <span class="number1"> &nbsp;Assigment2</span>
+            </h3>
+        </div>
+
+        <div class="main1">
+            <h1 class="h11">JavaScript Control Structure</h1>
+            <div class="small21">
+                <hr>
+                <h3> 
+                    <!-- <span class="under_number_blue1"></span>
+                    <span class="under_number_white1"></span> -->
+                    <span class="number1"> &nbsp;Examples </span>
+                </h3>
+            </div>
+
+            <div class="buttons1">
+                <button onclick="checkAge()" class="button">Check Age</button>
+                <button onclick="ageCategory()" class="button">Age Category</button>
+                <button onclick="getGrade()" class="button">Check Grade</button>
+                <button onclick="ternaryCheck()" class="button">Ternary Check</button>
+                <button onclick="dayCheck()" class="button">Check Day</button>
+            </div>
+            
+            <div id="output6" class="output-container"></div>
+            
+
+            <div class="small21">
+                <hr>
+                <h3> 
+                    <!-- <span class="under_number_blue1"></span>
+                    <span class="under_number_white1"></span> -->
+                    <span class="number1"> &nbsp;Iterations </span>
+                </h3>
+            </div>
+
+            <div class="buttons1">
+                <button onclick="loop1to5()" class="button">For Loop (1 to 5)</button>
+                <button onclick="while1to5()" class="button">While Loop (1 to 5)</button>
+                <button onclick="doWhile1to5()" class="button">Do While Loop (1 to 5)</button>
+                <button onclick="breakLoop()" class="button">Break Example</button>
+                <button onclick="continueLoop()" class="button">Continue Example</button>
+                <button onclick="nestedLoops()" class="button">Nested Loops</button>
+                <button onclick="multiplicationTable()" class="button">Multiplication Table</button>
+            </div>
+            
+            <div id="output7" class="output-container"></div>
+
+            <div class="small21">
+                <hr>
+                <h3> 
+                    <!-- <span class="under_number_blue1"></span> -->
+                    <!-- <span class="under_number_white1"></span> -->
+                    <span class="number1"> &nbsp;Decisions </span>
+                </h3>
+            </div>
+
+            <div class="buttons1">
+                <button onclick="positiveCheck()" class="button">Positive Number</button>
+                <button onclick="ifElseCheck()" class="button">If-Else Condition</button>
+                <button onclick="oddOrEven()" class="button">Odd or Even</button>
+                <button onclick="printNumbers()" class="button">Print Numbers (1 to 5)</button>
+                <button onclick="displayText()" class="button">Display Text</button>
+                <button onclick="sumNaturalNumbers()" class="button">Sum of Natural Numbers</button>
+                <button onclick="whilePrint()" class="button">While Loop Example</button>
+                <button onclick="sumPositiveNumbers()" class="button">Sum of Positive Numbers</button>
+                <button onclick="doWhileSum()" class="button">Sum (Do While)</button>
+            </div>
+            
+            <div id="output8" class="output-container"></div>
+        </div>
+    </div>
+</div></center><br>
+
+<!-- menu -->
+<a href="index.html" class="back-to-menu">
+    <div class="icon-menu">
+        <i class="fa-duotone fa-solid fa-arrow-left"></i>
+    </div>
+  </a><br>
+<!-- menu -->
+
+<a href="#top" class="back-to-top">
+    <div class="icon">
+      <i class="fa-solid fa-arrow-up"></i>
+    </div>
+  </a><br>
+
+     <footer class="container-footer">
+      <h3 class="js">AssingMent-js</h3><hr>
+      <p>© <span>Copyright</span> <strong class="sitename">AssingMent-js</strong> <span>All Rights Reserved</span></p>   
+    </footer>
+    <script src="../JavaScript/main.js"></script>
+</body>
+</html>
